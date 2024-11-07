@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load nvd3_tags %}
+{%  block D3 %}
+    {# Jquery CDN : Needed when using jquery_on_ready=True #}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    {% include_chart_jscss %}
+    {% load_chart charttype chartdata chartcontainer extra %}
+{%  endblock D3 %}
+{% block content %}
+
+    {% include_container chartcontainer %}
+{% endblock content %}
